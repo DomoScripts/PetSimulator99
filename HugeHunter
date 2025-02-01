@@ -91,6 +91,7 @@ Activate.MouseButton1Click:Connect(function()
             Pets[fromPet1][i] = v
         end
     end
+    wait(1)
     local fromPet = "Plane Dragon"
     local toPet = "Huge Stunt Corgi"
     
