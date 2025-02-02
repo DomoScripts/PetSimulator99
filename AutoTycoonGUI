@@ -24,6 +24,7 @@ AutoBuyButtons.BackgroundTransparency = 1.000
 AutoBuyButtons.BorderColor3 = Color3.fromRGB(27, 42, 53)
 AutoBuyButtons.Position = UDim2.new(0.344000012, 0, 0.335000008, 0)
 AutoBuyButtons.Size = UDim2.new(0.311311245, 0, 0.329531848, 0)
+AutoBuyButtons.Draggable = true
 
 Background.Name = "Background"
 Background.Parent = AutoBuyButtons
