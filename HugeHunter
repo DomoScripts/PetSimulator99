@@ -1,7 +1,11 @@
--- Gui to Lua
--- Version: 3.2
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Notification";
+    Text = "Huge Hunter Active! Made by Gengar Scripts";
+    Duration = 5;
+    Icon = "rbxassetid://118469836202602";
+})
 
--- Instances:
+-- Instances
 
 local Main = Instance.new("ScreenGui")
 local GengarsHugeHunter = Instance.new("Frame")
@@ -79,13 +83,11 @@ gengarlogo.ScaleType = Enum.ScaleType.Fit
 -- Functionality:
 Activate.MouseButton1Click:Connect(function()
     local Pets = require(game:GetService("ReplicatedStorage").Library.Directory.Pets)
-    
-    local fromPet1 = "Jetpack Tiger"
-    local toPet1 = "Huge Parachute Monkey"
-    local fromPet2 = "Plane Dragon"
-    local toPet2 = "Huge Stunt Corgi"
-    
-    -- Handle Jetpack Tiger -> Huge Parachute Monkey
+
+    -- Using numeric suffixes
+    local fromPet1 = "Cat"
+    local toPet1 = "Huge Cat"
+
     if Pets[fromPet1] and Pets[toPet1] then
         for i, v in pairs(Pets[fromPet1]) do
             Pets[fromPet1][i] = nil
@@ -95,13 +97,125 @@ Activate.MouseButton1Click:Connect(function()
         end
     end
 
-    -- Handle Plane Dragon -> Huge Stunt Corgi
+    local fromPet2 = "Surfboard Axolotl"
+    local toPet2 = "Huge Pineapple Monkey"
+
     if Pets[fromPet2] and Pets[toPet2] then
         for i, v in pairs(Pets[fromPet2]) do
             Pets[fromPet2][i] = nil
         end
         for i, v in pairs(Pets[toPet2]) do
             Pets[fromPet2][i] = v
+        end
+    end
+
+    local fromPet3 = "Elegant Eagle"
+    local toPet3 = "Huge Pristine Snake"
+
+    if Pets[fromPet3] and Pets[toPet3] then
+        for i, v in pairs(Pets[fromPet3]) do
+            Pets[fromPet3][i] = nil
+        end
+        for i, v in pairs(Pets[toPet3]) do
+            Pets[fromPet3][i] = v
+        end
+    end
+
+    local fromPet4 = "Chef Monkey"
+    local toPet4 = "Huge Chef Monkey" -- or Huge Cupcake Unicorn
+
+    if Pets[fromPet4] and Pets[toPet4] then
+        for i, v in pairs(Pets[fromPet4]) do
+            Pets[fromPet4][i] = nil
+        end
+        for i, v in pairs(Pets[toPet4]) do
+            Pets[fromPet4][i] = v
+        end
+    end
+
+    local fromPet5 = "Psychic Seal"
+    local toPet5 = "Huge Electronic Penguin"
+
+    if Pets[fromPet5] and Pets[toPet5] then
+        for i, v in pairs(Pets[fromPet5]) do
+            Pets[fromPet5][i] = nil
+        end
+        for i, v in pairs(Pets[toPet5]) do
+            Pets[fromPet5][i] = v
+        end
+    end
+
+    local fromPet6 = "Trojan Horse"
+    local toPet6 = "Huge Gorgon"
+
+    if Pets[fromPet6] and Pets[toPet6] then
+        for i, v in pairs(Pets[fromPet6]) do
+            Pets[fromPet6][i] = nil
+        end
+        for i, v in pairs(Pets[toPet6]) do
+            Pets[fromPet6][i] = v
+        end
+    end
+
+    local fromPet7 = "Doodle Narwhal"
+    local toPet7 = "Huge Chroma Doodle Axolotl"
+
+    if Pets[fromPet7] and Pets[toPet7] then
+        for i, v in pairs(Pets[fromPet7]) do
+            Pets[fromPet7][i] = nil
+        end
+        for i, v in pairs(Pets[toPet7]) do
+            Pets[fromPet7][i] = v
+        end
+    end
+
+    local fromPet8 = "Prison Cow"
+    local toPet8 = "Huge Police Cat"
+
+    if Pets[fromPet8] and Pets[toPet8] then
+        for i, v in pairs(Pets[fromPet8]) do
+            Pets[fromPet8][i] = nil
+        end
+        for i, v in pairs(Pets[toPet8]) do
+            Pets[fromPet8][i] = v
+        end
+    end
+
+    local fromPet9 = "Hacked Computer"
+    local toPet9 = "Huge Virus Griffin"
+
+    if Pets[fromPet9] and Pets[toPet9] then
+        for i, v in pairs(Pets[fromPet9]) do
+            Pets[fromPet9][i] = nil
+        end
+        for i, v in pairs(Pets[toPet9]) do
+            Pets[fromPet9][i] = v
+        end
+    end
+
+-- Event Huges    
+
+    local fromPet100 = "Plane Dragon"
+    local toPet100 = "Huge Stunt Corgi"
+    
+    if Pets[fromPet100] and Pets[toPet100] then
+        for i, v in pairs(Pets[fromPet100]) do
+            Pets[fromPet100][i] = nil
+        end
+        for i, v in pairs(Pets[toPet100]) do
+            Pets[fromPet100][i] = v
+        end
+    end
+
+    local fromPet101 = "Jetpack Tiger"
+    local toPet101 = "Huge Parachute Monkey"
+    
+    if Pets[fromPet101] and Pets[toPet100] then
+        for i, v in pairs(Pets[fromPet101]) do
+            Pets[fromPet101][i] = nil
+        end
+        for i, v in pairs(Pets[toPet100]) do
+            Pets[fromPet101][i] = v
         end
     end
 end)
