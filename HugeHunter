@@ -78,4 +78,18 @@ gengarlogo.ScaleType = Enum.ScaleType.Fit
 
 -- Functionality:
 Activate.MouseButton1Click:Connect(function()
+    local Pets = require(game:GetService("ReplicatedStorage").Library.Directory.Pets)
+    
+    local fromPet1 = "Love Cow"
+    local toPet1 = "Huge Valentines Bear"
+    
+    -- Handle Love Cow -> Huge Valentine’s Bear
+    if Pets[fromPet1] and Pets[toPet1] then
+        for i, v in pairs(Pets[fromPet1]) do
+            Pets[fromPet1][i] = nil
+        end
+        for i, v in pairs(Pets[toPet1]) do
+            Pets[fromPet1][i] = v
+        end
+    end
 end)
