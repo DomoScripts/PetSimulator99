@@ -1,0 +1,26 @@
+local fromCard = "Gamer Shiba Card"
+local toCard = "Huge Arcade Dog Card"
+
+local function activateCardHunter()
+    local Cards = require(game:GetService("ReplicatedStorage").Library.Directory.CardItems)
+
+    if fromCard == "" or toCard == "" then
+        warn("Please provide valid pet names.")
+        return
+    end
+
+    if Cards[fromCard] and Cards[toCard] then
+        for i, v in pairs(Cards[fromCard]) do
+            Cards[fromCard][i] = nil
+        end
+        for i, v in pairs(Cards[toCard]) do
+            Cards[fromCard][i] = v
+        end
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Huge Card Hunter Enabled Successfully!")
+    else
+        warn("Invalid Cards Detected!")
+    end
+end
+
+activateCardHunter()
